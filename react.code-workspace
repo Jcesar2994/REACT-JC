@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../PROGRAMMING/curso de html css/mi primera pagina"
+		},
+		{
+			"path": "../../PROGRAMMING2"
+		},
+		{
+			"path": "../HTML"
+		},
+		{
+			"path": "../CSS"
+		},
+		{
+			"path": "../../BOOTCAMP2/PORTFOLIO"
+		},
+		{
+			"path": "../JS"
+		},
+		{
+			"path": "../REACT"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "REACT"
+	}
+}
