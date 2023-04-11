@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<title>React</title>
+</head>
+<body>
+    <!-- react trata de tomar un elemento de html y se le asigna react a ese elemento 
+    y todo lo que se escriba en react va a comenzar a aparecer en este elemento -->
+
+    <!-- el elemento raiz va a ser un div para este caso -->
+    <!-- react permite crear elementos de html dentro del script -->
+    <div id="root"></div>
+    <script type="text/babel">
+    // con este type de text babel se le dice a babel que compile todo esto a javascript
+    function tick(){
+        const element =(
+            // div es el elemento de jsx 
+            // JSX  es escribir codigo dentro del script como si fuera html pero con javascript tambien
+            <div>
+                <h1>¿Qué hora es?</h1>    
+                <h2>Son las {new Date().toLocaleTimeString()}</h2>
+
+            </div>
+            // dentro de las llaves como {new date} se puede poner javascript regular
+        );
+        ReactDOM.render(element, document.getElementById('root'));    
+        // hace una renderizacion de este elemento en la raiz
+    }
+    setInterval(tick,1000);
+    // con el web API setinterval vuelve a llamar a la funcion tick cada 1000 milisegundos es decir cada segundo
+    </script>
+    <!-- react permite crear elementos de html dentro de un script -->
+</body>
+</html>
