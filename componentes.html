@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<title>React</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+   
+        // const h1 = React.createElement('h1',{className:'clase-de-css'}, 'Hello world');
+        
+        // para crear un componente hay que crear una funcion; los componentes siempre empiezan con mayuscula
+        function Bienvenido(props){
+            // props es el nombre que react le da a las propiedades que son como atributos en html
+            return <h1 >Bienvenida {props.nombre}!</h1>
+        }
+
+        // con eso hemos creado un componente poniendo el jsx (h1 bienvenido) recuerda que el jsx es el html escrito como si fuera javascript
+        // y ahora ese componente podemos utilizarlo como si fuera JSX como que fuera html
+        function Login(props){
+            return(
+                <form action="/action.php" method="POST">
+                    <label for="name">Nombre:</label>
+                    <input id="name" name="name" value={props.nombre} />
+                    <br />
+                    <label>
+                        Email
+                        <input name="email" type="email" required placeholder="miemail@ejemplo.com" />
+                    </label>
+                    <br />
+                    <button>Iniciar Sesión</button>
+                </form>
+            );
+
+        }
+
+
+
+        // creemos otro componente, es un componente que va a guardar toda la aplicación
+
+        function App(){
+            const nombre = 'Julio';
+            return (
+                <div>
+                    <Bienvenido nombre= {nombre}/>
+                        
+                    <Login nombre={nombre}/>  
+                       
+                </div>
+            );
+        }
+        // se utilizan las llaves en jsx para pasar los valores de javascript
+
+        ReactDOM.render(<App />,document.getElementById('root'));
+    </script>
+    <!-- react permite crear elementos de html dentro de un script -->
+</body>
+</html>
