@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../REACT"
+		},
+		{
+			"path": "../HTML"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "REACT JC"
+	}
+}

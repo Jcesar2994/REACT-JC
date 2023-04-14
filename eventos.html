@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<title>React</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        // creemos otro componente, es un componente que va a guardar toda la aplicación
+
+        // function Alertador(props){
+        //     return <button onClick={()=>alert("Alerta Tio!")}>Da click!</button>
+        // }
+        // otra forma de poner la alerta para más facil de leer es extraer la funcion y guardarla como constante
+        function Alertador(props){
+            const alerta = ()=>alert("Alerta Tio!")
+            return <button onClick={alerta}>Da click!</button>
+        }
+        // se utilizan las llaves en jsx para pasar los valores de javascript
+        // los elementos de html tienen atributos para crear eventos como el atributo onclick
+        // pero tiene que ser con C (c mayuscula para crear el evento con jsx)
+        // puedo poner llaves para poner lo que sea en jsx y pongo una funcion fleca ()=>
+
+        ReactDOM.render(<Alertador />,document.getElementById('root'));
+    </script>
+    <!-- utilizo react.dom para renderizar el componente app en la raiz que es root -->
+    <!-- react permite crear elementos de html dentro de un script -->
+</body>
+</html>

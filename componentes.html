@@ -15,8 +15,10 @@
         // const h1 = React.createElement('h1',{className:'clase-de-css'}, 'Hello world');
         
         // para crear un componente hay que crear una funcion; los componentes siempre empiezan con mayuscula
+        // la funcion que conforma el componente va a retornar (return ) el html que representa ese componente
         function Bienvenido(props){
             // props es el nombre que react le da a las propiedades que son como atributos en html
+            // dentro de las llaves pongo props. y cualquier propiedad que quiero crear en este caso pongo una que se llama nombre
             return <h1 >Bienvenida {props.nombre}!</h1>
         }
 
@@ -58,6 +60,7 @@
 
         ReactDOM.render(<App />,document.getElementById('root'));
     </script>
+    <!-- utilizo react.dom para renderizar el componente app en la raiz que es root -->
     <!-- react permite crear elementos de html dentro de un script -->
 </body>
 </html>
