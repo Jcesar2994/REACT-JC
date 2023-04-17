@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<title>React</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // componente que creo y que se va a encargar de contar
+        /* componente checa el estado de algo como por ejemplo un checkbox si esta checkeado o no */
+        // los hooks o ganchos son los que nos permiten guardar estados, uno es useState
+        function Contador(props){
+          const[contar, setContar] = React.useState(0);
+            // al crear este estado de useState, se va acrear y la funcion va a retornar una lista con dos valores
+            // el primer valor va a ser el estado y el segundo es una funcion que nos va a permitir guardar el estado
+            // podemos guardar el react.useState en un par de variables, es solo una forma de obtener valores de una lista de javascript
+            // la palabra set normalmente se utiliza para indicar que vamos a hacer un cambio o que vamos a modificar algo
+            return(
+                <div>
+                    <h1>{contar}</h1>    
+                    <button onClick={()=>setContar(contar +1 )}>click</button>
+                </div>
+                //para añadir uno cada que doy un clic añado el atributo onclick
+            )
+
+        }
+
+        ReactDOM.render(<Contador />,document.getElementById('root'));
+    </script>
+    <!-- utilizo react.dom para renderizar el componente app en la raiz que es root -->
+    <!-- react permite crear elementos de html dentro de un script -->
+</body>
+</html>
